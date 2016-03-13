@@ -15,7 +15,7 @@
 window.addEventListener('message',function(e) {
 	if(e.source != window.parent) return;
 	var name = 'xbw';
-	window.parent.postMessage(name,'index.html');
+	window.parent.postMessage(name,'*');
 },false);
 
 </script>
