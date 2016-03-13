@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>子文档</title>
+	<style type="text/css">
+	#box {
+		background-color: red;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">这里是子文档</div>
+<script type="text/javascript">
+window.addEventListener('message',function(e) {
+	if(e.source != window.parent) return;
+	var name = 'xbw';
+	window.parent.postMessage(name,'index.html');
+},false);
+
+</script>
+</body>
+</html>
